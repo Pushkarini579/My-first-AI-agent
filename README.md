@@ -2,22 +2,27 @@
 
 ## Overview
 
-This project is a simple AI-powered chat agent built using n8n and LangChain nodes. It can respond to user messages, maintain short-term memory for context, and fetch real-time information using Google search.
+This project is a simple AI-powered chat agent built using n8n and LangChain nodes. It responds to user messages, maintains short-term memory for contextual conversations, and fetches real-time information using Google search.
+
+## Live Workflow
+
+Access the deployed workflow here:
+https://nani1.app.n8n.cloud/workflow/FbWopYGxmEj76E40
 
 ## Features
 
 * Chat trigger to start the workflow on user input
-* AI agent to process and respond to queries
-* Google Gemini model for natural language understanding
+* AI agent for intelligent response generation
+* Google Gemini model for language processing
 * Memory buffer to retain last 7 interactions
-* SerpAPI integration for real-time search results
+* SerpAPI integration for real-time search
 * Optional calculator tool (currently disabled)
 
 ## Workflow Architecture
 
 User Message → AI Agent →
 
-* Gemini Model (language processing)
+* Gemini Model (language understanding)
 * Memory (context retention)
 * Tools (search and calculator)
 
@@ -25,48 +30,48 @@ User Message → AI Agent →
 
 ### Prerequisites
 
-* n8n installed (local or cloud)
+* n8n (cloud or self-hosted)
 * Google Gemini API access
 * SerpAPI key
 
 ### Import Workflow
 
 1. Open n8n
-2. Go to Workflows
+2. Navigate to Workflows
 3. Click "Import from JSON"
-4. Paste the provided JSON
+4. Paste the workflow JSON
 5. Save and activate
 
 ### Configure Credentials
 
 * Add Google Gemini API credentials
 * Add SerpAPI credentials
-* Attach them to respective nodes
+* Connect them to respective nodes
 
 ### Run the Agent
 
 * Click "Open Chat"
-* Start interacting with the agent
+* Start interacting with the AI agent
 
 ## Customization
 
-* Enable calculator tool if needed
+* Enable calculator tool for math queries
 * Increase memory window size
-* Add more tools (APIs, database, etc.)
-* Connect to external platforms like WhatsApp or Telegram
+* Add external APIs or database integration
+* Connect to messaging platforms (WhatsApp, Telegram)
 
 ## Notes
 
 * Memory is limited to 7 messages (configurable)
 * Calculator node is disabled by default
-* SerpAPI requires an API key
+* SerpAPI requires a valid API key
 
 ## Future Improvements
 
-* Add long-term memory (database)
-* Add system prompts for personality
-* Build a frontend interface
-* Deploy as a chatbot service
+* Add long-term memory storage
+* Introduce system prompts for personality
+* Build a frontend UI
+* Deploy as a full chatbot service
 
 ## Author
 
